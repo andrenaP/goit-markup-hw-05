@@ -13,9 +13,9 @@
 
   }
 button{
-    transition-property: background-color;
+    transition-property: background-color ,box-shadow;
     transition-duration: 250ms;
-    transition-timing-function: linear;
+    transition-timing-function: var(--Timing-funk);
 }
 body{
     font-family: 'Roboto', sans-serif !important;
@@ -60,6 +60,7 @@ ul {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms var(--Timing-funk);
 }
 .card-social-icon
 {
@@ -189,6 +190,7 @@ font-weight: 500;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--NAVY-BLUE);
+transition: color 250ms var(--Timing-funk);
 }
 
 .header-address {
@@ -208,6 +210,7 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--SLATE);
 font-style: normal;
+transition: color 250ms var(--Timing-funk);
 }
 .header-address-tel-link{
     
@@ -235,7 +238,7 @@ color: var(--SLATE);
     background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office1.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-blend-mode:soft-light;
+   
 }
 .hero-header {
     
@@ -266,7 +269,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border: none;
 cursor: pointer;
 padding: 16px 32px;
-
+transition: background-color 250ms var(--Timing-funk);
 
 }
 .features-svg-image{
@@ -501,7 +504,7 @@ color: var(--CORNFLOWER);
 background: var(--CLOUD);
 color: var(--Iris);
 border: 1px solid var(--CORNFLOWER);
-
+transition: color 250ms var(--Timing-funk), background-color 250ms var(--Timing-funk), border-color 250ms var(--Timing-funk), box-shadow 250ms var(--Timing-funk);
 
 
 
@@ -571,6 +574,8 @@ color: var(--SLATE);
     justify-content: center;
     align-items: center;
     color: var(--LIGHT-SLATE);
+    transition: color 250ms var(--Timing-funk),
+     border-color 250ms var(--Timing-funk);
 }
 .customers-icon{
     fill: currentColor;
@@ -610,6 +615,7 @@ color: var(--SLATE);
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms var(--Timing-funk);
 }
 .footer-social-link:hover,
 .footer-social-link:focus{
@@ -619,7 +625,7 @@ color: var(--SLATE);
 .portfolio-link{
     transition-property: box-shadow;
     transition-duration: 250ms;
-    transition-timing-function: linear;
+    transition-timing-function: --Timing-funk;
 
 }
 .portfolio-link:hover,
@@ -657,4 +663,46 @@ color: var(--SLATE);
 }
 .portfolio-link:is(:hover,:focus) .portfolio-text-transform{
     transform: translateY(0);
+}
+.modal{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 576px;
+    width: 408px;
+    background-color: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 14%), 0px 1px 3px rgba(0, 0, 0, 12%), 0px 2px 1px rgba(0, 0, 0, 2%);
+    border-radius: 4px;
+
+}
+.backdrop{
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+
+}
+.is-hidden{
+opacity: 0;
+pointer-events: none;
+}
+.modal-btn{
+    
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
 }
