@@ -15,7 +15,7 @@
 button{
     transition-property: background-color;
     transition-duration: 250ms;
-    transition-timing-function: linear;
+    transition-timing-function: var(--Timing-funk);
 }
 body{
     font-family: 'Roboto', sans-serif !important;
@@ -157,6 +157,32 @@ text-transform: uppercase;
 color: var(--NAVY-BLUE);
 margin-right: 76px;
 }
+.portfolio-link{
+transition: box-shadow,2500ms,var(--Timing-funk);
+}
+.portfolio-thumb{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.portfolio-link:is(:hover,:focus) .portfolio-description{
+    transform: translateY(0);
+}
+.portfolio-description{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px 0 32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    background-color: #4D5AE5;
+    transform: translateY(100%);
+    transition: transform 250ms var(--bezier-time);
+}
+
 button{
     cursor: pointer;
 }
@@ -616,10 +642,12 @@ color: var(--SLATE);
     background-color: var(--GREEN-color);
 
 }
+
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+      
   }
 
   .footer-social-text{
