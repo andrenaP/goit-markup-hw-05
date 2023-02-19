@@ -636,3 +636,25 @@ color: var(--SLATE);
     letter-spacing: 0.02em;
     color: var(--White-color);
   }
+.portfolio-transform{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.portfolio-text-transform{
+    position: absolute;  
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px 0 32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    background-color: #4D5AE5;
+    transform: translateY(100%);
+    transition: transform 250ms var(--Timing-funk);
+}
+.portfolio-link:is(:hover,:focus) .portfolio-text-transform{
+    transform: translateY(0);
+}
